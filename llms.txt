@@ -1,0 +1,24 @@
+# Rico Mercado
+> Responsible AI & Governance advisor focused on AI-legible operations, minimal controls, readiness, and practical implementation.
+
+## Summary
+I help organizations build AI-legible, governable systems using minimal, auditable controls and readiness approaches. My work emphasizes practical governance models, evidence kits, and policy-to-practice execution for PH/ASEAN contexts.
+
+## Services
+- AI Governance & Readiness Audits
+- Minimal Controls (MV-AIG) Design
+- Responsible AI Operating Models
+- Evidence Kits & Governance Tooling
+- Policy-to-Execution Advisory
+
+## Primary Sites
+- https://ricomercado.co
+- https://rightlensai.com
+
+## Background
+- AIM PGDGM 
+- PMP (active); former Head of IT Business Applications, APAC
+- AWS AI Practitioner + Solutions Architect/Security pathway
+
+## Optional
+- https://www.linkedin.com/in/ricomercado
