@@ -2,259 +2,502 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rico Mercado — AI Governance Partner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta
-    name="description"
-    content="Rico Mercado is an AI Governance Partner and Founder of RightLens AI, helping organizations adopt AI responsibly, practically, and with measurable value."
-  >
+  <title>Rico Mercado - AI Governance Partner</title>
+  <meta name="description" content="Rico Mercado is an AI Governance Partner and Founder of RightLens AI, helping organizations determine where AI genuinely belongs and create measurable value with clear accountability and human oversight.">
+  <meta name="author" content="Rico Mercado">
+  <meta name="theme-color" content="#0b1f3a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rico Mercado - AI Governance Partner">
+  <meta property="og:description" content="Helping organizations improve how work gets done with AI - without losing accountability, human judgment or trust.">
+  <meta property="og:url" content="https://ricomercado.co/">
 
   <style>
     :root {
       --navy: #0b1f3a;
+      --navy-2: #16345d;
       --blue: #0066cc;
       --gold: #d9a441;
-      --text: #222;
-      --muted: #666;
+      --text: #20242a;
+      --muted: #5e6875;
       --light: #f7f9fc;
-      --border: #dde6f2;
       --soft-blue: #eaf1fb;
+      --border: #dce5f0;
+      --white: #ffffff;
+      --shadow: 0 12px 30px rgba(11, 31, 58, 0.08);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 820px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      line-height: 1.65;
+      margin: 0;
       color: var(--text);
-      background: #ffffff;
-    }
-
-    h1, h2, h3 {
-      line-height: 1.25;
-      margin-bottom: .5rem;
-      color: var(--navy);
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      margin-bottom: .25rem;
-      letter-spacing: -0.04em;
-    }
-
-    h2 {
-      margin-top: 2.25rem;
-      font-size: 1.65rem;
-    }
-
-    h3 {
-      margin-top: 1.5rem;
-      font-size: 1.15rem;
-    }
-
-    p {
-      margin-top: .5rem;
-      margin-bottom: 1rem;
+      background: var(--white);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
     }
 
     a {
       color: var(--blue);
+      font-weight: 650;
       text-decoration: none;
-      font-weight: 600;
     }
 
-    a:hover {
+    a:hover,
+    a:focus-visible {
       text-decoration: underline;
     }
 
-    ul {
-      padding-left: 1.4rem;
+    a:focus-visible {
+      outline: 3px solid rgba(0, 102, 204, 0.25);
+      outline-offset: 3px;
     }
 
-    li {
-      margin-bottom: .45rem;
+    .shell {
+      width: min(100% - 2rem, 960px);
+      margin-inline: auto;
     }
 
-    .subtitle {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin-top: .25rem;
+    .site-nav {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.96);
     }
 
-    .tagline {
-      font-size: 1.25rem;
-      font-weight: 700;
+    .nav-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
       color: var(--navy);
-      margin-top: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.9rem;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .hero {
+      padding: clamp(3.5rem, 8vw, 6.5rem) 0 3rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.75rem;
+      color: var(--blue);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--navy);
+      line-height: 1.18;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(2.45rem, 8vw, 5.2rem);
+      letter-spacing: -0.055em;
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.14rem;
+    }
+
+    .role {
+      margin: 0.8rem 0 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+      font-weight: 650;
+    }
+
+    .hero-copy {
+      max-width: 780px;
+      margin: 1.35rem 0 0;
+      color: var(--navy);
+      font-size: clamp(1.2rem, 3vw, 1.48rem);
+      font-weight: 730;
+      line-height: 1.48;
+    }
+
+    .hero-support {
       max-width: 760px;
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.65rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.78rem 1rem;
+      border: 1px solid var(--navy);
+      border-radius: 12px;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 760;
+      text-align: center;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--navy-2);
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .button.secondary:hover,
+    .button.secondary:focus-visible {
+      background: #0055aa;
+    }
+
+    .button.light {
+      border-color: var(--border);
+      background: var(--light);
+      color: var(--navy);
+    }
+
+    .button.light:hover,
+    .button.light:focus-visible {
+      background: var(--soft-blue);
+      color: var(--navy);
     }
 
     .section {
       border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
-      margin-top: 2rem;
+      padding: clamp(2.5rem, 6vw, 4rem) 0;
     }
 
-    .highlight {
-      background: var(--soft-blue);
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .perspective {
+      margin-top: 1.5rem;
+      padding: clamp(1.25rem, 4vw, 2rem);
+      border: 1px solid var(--border);
       border-left: 5px solid var(--gold);
-      padding: 1rem 1.15rem;
-      border-radius: 12px;
-      margin: 1.25rem 0;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--soft-blue), #f9fbfe);
+      box-shadow: var(--shadow);
     }
 
-    .button-row {
+    .perspective p:last-child,
+    .card p:last-child,
+    .contact-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .formula {
+      margin: 1rem 0;
+      color: var(--navy);
+      font-size: clamp(1.26rem, 4vw, 1.65rem);
+      font-weight: 850;
+      letter-spacing: -0.025em;
+    }
+
+    .grid {
       display: grid;
-      gap: .75rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
       margin-top: 1.5rem;
     }
 
-    .button {
-      display: block;
-      text-align: center;
-      background: var(--navy);
-      color: #ffffff;
-      padding: .85rem 1rem;
-      border-radius: 12px;
-      font-weight: 700;
+    .card {
+      padding: 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+      box-shadow: 0 8px 22px rgba(11, 31, 58, 0.05);
     }
 
-    .button:hover {
-      text-decoration: none;
-      background: #16345d;
+    .card p {
+      margin-top: 0.45rem;
+      color: var(--muted);
     }
 
-    .button.secondary {
-      background: var(--blue);
+    .principles {
+      margin: 1.25rem 0 0;
+      padding-left: 1.3rem;
     }
 
-    .button.light {
+    .principles li {
+      margin-bottom: 0.65rem;
+      padding-left: 0.2rem;
+    }
+
+    .experience-copy {
+      max-width: 790px;
+    }
+
+    .credential-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      padding: 0;
+      margin: 1.25rem 0 0;
+      list-style: none;
+    }
+
+    .credential-list li {
+      padding: 0.42rem 0.68rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
       background: var(--light);
       color: var(--navy);
-      border: 1px solid var(--border);
+      font-size: 0.92rem;
+      font-weight: 680;
     }
 
     .contact-box {
-      background: var(--light);
+      padding: clamp(1.25rem, 4vw, 2rem);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.25rem;
-      margin-top: 1rem;
+      border-radius: var(--radius);
+      background: var(--light);
     }
 
     footer {
-      margin-top: 3rem;
-      font-size: .9rem;
-      color: var(--muted);
+      padding: 1.5rem 0 2.5rem;
       border-top: 1px solid var(--border);
-      padding-top: 1.25rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0.9rem 0;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button-row,
+      .button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Rico Mercado</h1>
-
-    <p class="subtitle">
-      AI Governance Partner | Founder, RightLens AI
-    </p>
-
-    <p class="tagline">
-      I help organizations adopt AI responsibly, practically, and with measurable value - connecting governance, project leadership, data boundaries, human oversight, and operational trust.
-    </p>
-
-    <div class="button-row">
-      <a class="button" href="https://rightlensai.com">Visit RightLens AI</a>
-      <a class="button secondary" href="https://www.linkedin.com/in/ricovm">Connect on LinkedIn</a>
-      <a class="button light" href="mailto:hello@rightlensai.com">Email Rico</a>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">Rico Mercado</a>
+      <div class="nav-links">
+        <a href="#perspective">Perspective</a>
+        <a href="#work">Current work</a>
+        <a href="#experience">Experience</a>
+        <a href="#connect">Connect</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <section class="section">
-    <h2>Current Work</h2>
+  <main id="top">
+    <header class="shell hero">
+      <p class="eyebrow">AI Governance Partner</p>
+      <h1>Rico Mercado</h1>
+      <p class="role">Founder, RightLens AI</p>
 
-    <p>
-      I am building <strong>RightLens AI</strong> as a practical AI readiness and governance advisory practice for Philippine SMEs and organizations.
-    </p>
-
-    <p>
-      The work focuses on helping organizations make AI use visible, accountable, safe, and measurable - one governed AI use case at a time.
-    </p>
-
-    <div class="highlight">
-      <h3>From Digital Safety to AI Readiness</h3>
-
-      <p>
-        Digital safety is part of a larger trust challenge for organizations adopting AI, automation, and digital platforms.
+      <p class="hero-copy">
+        I help organizations improve how work gets done with AI - without losing accountability, human judgment or trust.
       </p>
 
-      <p>
-        In that sense, digital safety is a shared responsibility - and AI readiness is one practical way organizations can operationalize it.
-      </p>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Focus Areas</h2>
-
-    <ul>
-      <li>Practical AI readiness for SMEs and organizations</li>
-      <li>AI-legibility and accountable AI use cases</li>
-      <li>Data boundaries, privacy awareness, and evidence of value</li>
-      <li>Human oversight and responsible adoption</li>
-      <li>AI value, risk, workforce impact, and governance controls</li>
-      <li>Project leadership for responsible AI transformation</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Professional Background</h2>
-
-    <p>
-      My work builds on more than 20 years of IT leadership, business applications, SAP, and project management experience across APAC.
-    </p>
-
-    <p>
-      I am an active PMP credential holder and continue to connect governance, technology adoption, and practical execution in my AI work.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Connect</h2>
-
-    <div class="contact-box">
-      <p>
-        For conversations, collaborations, or practical AI readiness discussions:
+      <p class="hero-support">
+        My work draws on more than 20 years of APAC experience in IT leadership, enterprise applications, SAP and project governance. Today, I bring that experience into responsible AI adoption: helping leaders understand what really needs to improve, determine where AI genuinely belongs and keep people capable and accountable as the work changes.
       </p>
 
-      <p>
-        RightLens AI:
-        <a href="https://rightlensai.com">rightlensai.com</a>
-      </p>
+      <div class="button-row">
+        <a class="button" href="https://rightlensai.com">Visit RightLens AI</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/ricovm">Connect on LinkedIn</a>
+        <a class="button light" href="mailto:hello@rightlensai.com">Email Rico</a>
+      </div>
+    </header>
 
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/ricovm">linkedin.com/in/ricovm</a>
-      </p>
+    <section class="section" id="perspective">
+      <div class="shell">
+        <p class="eyebrow">Perspective</p>
+        <h2>A system can go live without the organization becoming better.</h2>
 
-      <p>
-        Email:
-        <a href="mailto:hello@rightlensai.com">hello@rightlensai.com</a>
-      </p>
+        <p class="section-intro">
+          Technology creates lasting value only when the work, information, decisions, controls and human responsibilities around it operate together. That lesson from enterprise technology remains highly relevant in the age of AI.
+        </p>
 
-      <p>
-        If we met at an event, feel free to mention where we met and what topic we discussed. Thank you.
-      </p>
-    </div>
-  </section>
+        <div class="perspective">
+          <h3>Before you buy or scale AI, ask what really needs to improve.</h3>
+          <p>
+            Begin with the problem, the outcome that matters and how the work gets done from beginning to end. Then decide whether AI belongs in the solution - or whether the organization first needs better data, clearer ownership or a simpler process.
+          </p>
+
+          <p class="formula">AI Value = Business Improvement + Risk Control + Human Confidence</p>
+
+          <p>
+            This is not arithmetic. It is a practical management test: sustainable AI value requires credible evidence across all three dimensions.
+          </p>
+        </div>
+
+        <div class="grid" aria-label="AI value dimensions">
+          <article class="card">
+            <h3>Business Improvement</h3>
+            <p>
+              The complete way of working produces a meaningful net improvement - not merely more output or a faster isolated task.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Risk Control</h3>
+            <p>
+              Ownership, data boundaries, human review, correction and escalation are clear and proportionate to the use.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Human Confidence</h3>
+            <p>
+              People understand AI's role, retain essential judgment and can question, correct or stop an outcome when needed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="shell">
+        <p class="eyebrow">Current work</p>
+        <h2>Building RightLens AI as a practical, human-centered advisory practice.</h2>
+
+        <p class="section-intro">
+          RightLens AI helps Philippine organizations make better decisions before buying, deploying or scaling AI. The starting point is one important problem or area of work - not a collection of tools.
+        </p>
+
+        <ul class="principles">
+          <li><strong>Understand before buying.</strong> Clarify the problem, desired outcome and current way of working.</li>
+          <li><strong>Improve the work before automating it.</strong> Remove unnecessary steps and decide whether AI is genuinely appropriate.</li>
+          <li><strong>Keep people capable and accountable.</strong> Define what AI may do, what must remain human and who owns the result.</li>
+          <li><strong>Make AI use governable.</strong> Establish clear data boundaries, review points, correction paths and evidence.</li>
+          <li><strong>Scale only with evidence.</strong> Measure business improvement, risk control and human confidence before expanding the use.</li>
+        </ul>
+
+        <div class="button-row">
+          <a class="button" href="https://rightlensai.com">Explore RightLens AI</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="shell experience-copy">
+        <p class="eyebrow">Experience</p>
+        <h2>From enterprise technology and project governance to responsible AI adoption.</h2>
+
+        <p>
+          My professional background spans more than 20 years of IT leadership across APAC, including enterprise business applications, SAP and complex project environments. That experience shaped a practical view of technology: implementation matters, but the real test is whether the organization becomes better and can sustain the change.
+        </p>
+
+        <p>
+          As Founder of RightLens AI and an AI Governance Partner, I now apply that perspective to AI - connecting business outcomes, accountable ownership, data boundaries, human oversight, workforce capability and evidence of value.
+        </p>
+
+        <ul class="credential-list" aria-label="Selected professional credentials">
+          <li>PMP</li>
+          <li>AWS Certified AI Practitioner</li>
+          <li>AIM-Emeritus Postgraduate Diploma in General Management</li>
+          <li>BS Computer Science, UPLB</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="connect">
+      <div class="shell">
+        <div class="contact-box">
+          <p class="eyebrow">Connect</p>
+          <h2>Start with one real AI decision.</h2>
+
+          <p>
+            I welcome thoughtful conversations with business leaders, practitioners, associations and collaborators working on responsible AI adoption, governance and the future of work.
+          </p>
+
+          <p>
+            If we met at an event, feel free to mention where we met and what topic we discussed.
+          </p>
+
+          <div class="button-row">
+            <a class="button" href="mailto:hello@rightlensai.com">hello@rightlensai.com</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/ricovm">LinkedIn</a>
+            <a class="button light" href="https://rightlensai.com">RightLens AI</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © <span id="y"></span> Rico Mercado
+    <div class="shell">
+      © <span id="year"></span> Rico Mercado. Views expressed are personal.
+    </div>
     <script>
-      document.getElementById('y').textContent = new Date().getFullYear();
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
 </body>
