@@ -1,2 +1,2 @@
 # ricomercado.co
-Personal identity site for Rico Mercado -  Responsible AI &amp; Governance Advisor.
+Rico Mercado is an AI Governance Partner helping organizations improve how work gets done with AI - without losing accountability, human judgment or trust.
