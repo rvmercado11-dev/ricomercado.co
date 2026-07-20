@@ -5,20 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Rico Mercado - AI Governance Partner</title>
-  <meta name="description" content="Rico Mercado is an AI Governance Partner and Founder of RightLens AI, helping organizations determine where AI genuinely belongs and create measurable value with clear accountability and human oversight.">
+
+  <meta
+    name="description"
+    content="Rico Mercado is an AI Governance Partner and Founder of RightLens AI, helping organizations determine where AI genuinely belongs and create measurable value with clear accountability and human oversight."
+  >
+
   <meta name="author" content="Rico Mercado">
   <meta name="theme-color" content="#0b1f3a">
 
+  <link rel="canonical" href="https://ricomercado.co/">
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rico Mercado - AI Governance Partner">
-  <meta property="og:description" content="Helping organizations improve how work gets done with AI - without losing accountability, human judgment or trust.">
+  <meta
+    property="og:description"
+    content="Helping organizations improve how work gets done with AI - without losing accountability, human judgment or trust."
+  >
   <meta property="og:url" content="https://ricomercado.co/">
+  <meta property="og:site_name" content="Rico Mercado">
+  <meta property="og:locale" content="en_PH">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rico Mercado - AI Governance Partner">
+  <meta
+    name="twitter:description"
+    content="Helping organizations improve how work gets done with AI - without losing accountability, human judgment or trust."
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rico Mercado",
+    "url": "https://ricomercado.co/",
+    "jobTitle": "AI Governance Partner",
+    "email": "mailto:hello@rightlensai.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/ricovm"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "RightLens AI",
+      "url": "https://rightlensai.com/"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of the Philippines Los Baños"
+    },
+    "knowsAbout": [
+      "AI governance",
+      "Responsible AI adoption",
+      "Information technology leadership",
+      "Enterprise applications",
+      "SAP",
+      "Project governance"
+    ]
+  }
+  </script>
 
   <style>
     :root {
       --navy: #0b1f3a;
       --navy-2: #16345d;
       --blue: #0066cc;
+      --blue-dark: #0055aa;
       --gold: #d9a441;
       --text: #20242a;
       --muted: #5e6875;
@@ -42,7 +93,12 @@
       margin: 0;
       color: var(--text);
       background: var(--white);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
       line-height: 1.65;
     }
 
@@ -58,8 +114,26 @@
     }
 
     a:focus-visible {
-      outline: 3px solid rgba(0, 102, 204, 0.25);
+      outline: 3px solid rgba(0, 102, 204, 0.35);
       outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 1000;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 750;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+      color: var(--white);
+      text-decoration: none;
     }
 
     .shell {
@@ -145,6 +219,20 @@
       font-weight: 650;
     }
 
+    .role-link {
+      color: inherit;
+      font-weight: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+    }
+
+    .role-link:hover,
+    .role-link:focus-visible {
+      color: var(--blue);
+      text-decoration-color: currentColor;
+    }
+
     .hero-copy {
       max-width: 780px;
       margin: 1.35rem 0 0;
@@ -189,6 +277,11 @@
       text-decoration: none;
     }
 
+    .button:focus-visible {
+      outline: 3px solid rgba(0, 102, 204, 0.4);
+      outline-offset: 3px;
+    }
+
     .button.secondary {
       border-color: var(--blue);
       background: var(--blue);
@@ -196,7 +289,11 @@
 
     .button.secondary:hover,
     .button.secondary:focus-visible {
-      background: #0055aa;
+      background: var(--blue-dark);
+    }
+
+    .button.secondary:focus-visible {
+      outline-color: rgba(217, 164, 65, 0.75);
     }
 
     .button.light {
@@ -212,8 +309,9 @@
     }
 
     .section {
-      border-top: 1px solid var(--border);
       padding: clamp(2.5rem, 6vw, 4rem) 0;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 1rem;
     }
 
     .section-intro {
@@ -306,6 +404,16 @@
       background: var(--light);
     }
 
+    .contact-email {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-email a {
+      overflow-wrap: anywhere;
+    }
+
     footer {
       padding: 1.5rem 0 2.5rem;
       border-top: 1px solid var(--border);
@@ -343,23 +451,33 @@
 </head>
 
 <body>
+  #main-content
+    Skip to main content
+  </a>
+
   <nav class="site-nav" aria-label="Primary navigation">
     <div class="shell nav-inner">
-      <a class="brand" href="#top">Rico Mercado</a>
-      <div class="nav-links">
-        <a href="#perspective">Perspective</a>
-        <a href="#work">Current work</a>
-        <a href="#experience">Experience</a>
+      <a class="brand" href="#main-content">Rico Mercado</-links">
+        #perspectivePerspective</a>
+        #workCurrent work</a>
+        #experienceExperience</a>
         <a href="#connect">Connect</a>
-      </div>
+>
     </div>
   </nav>
 
-  <main id="top">
+  <main id="main-content">
     <header class="shell hero">
       <p class="eyebrow">AI Governance Partner</p>
+
       <h1>Rico Mercado</h1>
-      <p class="role">Founder, RightLens AI</p>
+
+      <p class="role">
+        Founder,
+        <a class="role-link" href="https://rightlensai.com/">
+          RightLens AI
+        </a>
+      </p>
 
       <p class="hero-copy">
         I help organizations improve how work gets done with AI - without losing accountability, human judgment or trust.
@@ -370,27 +488,43 @@
       </p>
 
       <div class="button-row">
-        <a class="button" href="https://rightlensai.com">Visit RightLens AI</a>
-        <a class="button secondary" href="https://www.linkedin.com/in/ricovm">Connect on LinkedIn</a>
+        <a class="button" href="https://rightlensai.com/">
+          Visit RightLens AI
+        </a>
+
+        <a
+          class="button secondary"
+          href="https://www.linkedin.com/in/ricovm"
+        >
+          Connect on LinkedIn
+        </a>
       </div>
     </header>
 
     <section class="section" id="perspective">
       <div class="shell">
         <p class="eyebrow">Perspective</p>
-        <h2>A system can go live without the organization becoming better.</h2>
+
+        <h2>
+          A system can go live without the organization becoming better.
+        </h2>
 
         <p class="section-intro">
           Technology creates lasting value only when the work, information, decisions, controls and human responsibilities around it operate together. That lesson from enterprise technology remains highly relevant in the age of AI.
         </p>
 
         <div class="perspective">
-          <h3>Before you buy or scale AI, ask what really needs to improve.</h3>
+          <h3>
+            Before you buy or scale AI, ask what really needs to improve.
+          </h3>
+
           <p>
             Begin with the problem, the outcome that matters and how the work gets done from beginning to end. Then decide whether AI belongs in the solution - or whether the organization first needs better data, clearer ownership or a simpler process.
           </p>
 
-          <p class="formula">AI Value = Business Improvement + Risk Control + Human Confidence</p>
+          <p class="formula">
+            AI Value = Business Improvement + Risk Control + Human Confidence
+          </p>
 
           <p>
             This is not arithmetic. It is a practical management test: sustainable AI value requires credible evidence across all three dimensions.
@@ -400,6 +534,7 @@
         <div class="grid" aria-label="AI value dimensions">
           <article class="card">
             <h3>Business Improvement</h3>
+
             <p>
               The complete way of working produces a meaningful net improvement - not merely more output or a faster isolated task.
             </p>
@@ -407,6 +542,7 @@
 
           <article class="card">
             <h3>Risk Control</h3>
+
             <p>
               Ownership, data boundaries, human review, correction and escalation are clear and proportionate to the use.
             </p>
@@ -414,6 +550,7 @@
 
           <article class="card">
             <h3>Human Confidence</h3>
+
             <p>
               People understand AI's role, retain essential judgment and can question, correct or stop an outcome when needed.
             </p>
@@ -425,22 +562,46 @@
     <section class="section" id="work">
       <div class="shell">
         <p class="eyebrow">Current work</p>
-        <h2>Building RightLens AI as a practical, human-centered advisory practice.</h2>
+
+        <h2>
+          Building RightLens AI as a practical, human-centered advisory practice.
+        </h2>
 
         <p class="section-intro">
           RightLens AI helps Philippine organizations make better decisions before buying, deploying or scaling AI. The starting point is one important problem or area of work - not a collection of tools.
         </p>
 
         <ul class="principles">
-          <li><strong>Understand before buying.</strong> Clarify the problem, desired outcome and current way of working.</li>
-          <li><strong>Improve the work before automating it.</strong> Remove unnecessary steps and decide whether AI is genuinely appropriate.</li>
-          <li><strong>Keep people capable and accountable.</strong> Define what AI may do, what must remain human and who owns the result.</li>
-          <li><strong>Make AI use governable.</strong> Establish clear data boundaries, review points, correction paths and evidence.</li>
-          <li><strong>Scale only with evidence.</strong> Measure business improvement, risk control and human confidence before expanding the use.</li>
+          <li>
+            <strong>Understand before buying.</strong>
+            Clarify the problem, desired outcome and current way of working.
+          </li>
+
+          <li>
+            <strong>Improve the work before automating it.</strong>
+            Remove unnecessary steps and decide whether AI is genuinely appropriate.
+          </li>
+
+          <li>
+            <strong>Keep people capable and accountable.</strong>
+            Define what AI may do, what must remain human and who owns the result.
+          </li>
+
+          <li>
+            <strong>Make AI use governable.</strong>
+            Establish clear data boundaries, review points, correction paths and evidence.
+          </li>
+
+          <li>
+            <strong>Scale only with evidence.</strong>
+            Measure business improvement, risk control and human confidence before expanding the use.
+          </li>
         </ul>
 
         <div class="button-row">
-          <a class="button" href="https://rightlensai.com">Explore RightLens AI</a>
+          <a class="button" href="https://rightlensai.com/">
+            Explore RightLens AI
+          </a>
         </div>
       </div>
     </section>
@@ -448,7 +609,10 @@
     <section class="section" id="experience">
       <div class="shell experience-copy">
         <p class="eyebrow">Experience</p>
-        <h2>From enterprise technology and project governance to responsible AI adoption.</h2>
+
+        <h2>
+          From enterprise technology and project governance to responsible AI adoption.
+        </h2>
 
         <p>
           My professional background spans more than 20 years of IT leadership across APAC, including enterprise business applications, SAP and complex project environments. That experience shaped a practical view of technology: implementation matters, but the real test is whether the organization becomes better and can sustain the change.
@@ -458,7 +622,10 @@
           As Founder of RightLens AI and an AI Governance Partner, I now apply that perspective to AI - connecting business outcomes, accountable ownership, data boundaries, human oversight, workforce capability and evidence of value.
         </p>
 
-        <ul class="credential-list" aria-label="Selected professional credentials">
+        <ul
+          class="credential-list"
+          aria-label="Selected professional credentials"
+        >
           <li>PMP</li>
           <li>AWS Certified AI Practitioner</li>
           <li>AIM-Emeritus Postgraduate Diploma in General Management</li>
@@ -471,6 +638,7 @@
       <div class="shell">
         <div class="contact-box">
           <p class="eyebrow">Connect</p>
+
           <h2>Start with one real AI decision.</h2>
 
           <p>
@@ -482,9 +650,34 @@
           </p>
 
           <div class="button-row">
-            <a class="button secondary" href="https://www.linkedin.com/in/ricovm">LinkedIn</a>
-            <a class="button light" href="https://rightlensai.com">RightLens AI</a>
+            <a
+              class="button"
+              href="mailto:hello@rightlensai.com"
+            >
+              Email Rico
+            </a>
+
+            <a
+              class="button secondary"
+              href="https://www.linkedin.com/in/ricovm"
+            >
+              Connect on LinkedIn
+            </a>
+
+            <a
+              class="button light"
+              href="https://rightlensai.com/"
+            >
+              Visit RightLens AI
+            </a>
           </div>
+
+          <p class="contact-email">
+            Or write directly to
+            <a href="mailto:hello@rightlensai.com">
+              hello@rightlensai.com
+            </a>.
+          </p>
         </div>
       </div>
     </section>
@@ -492,11 +685,8 @@
 
   <footer>
     <div class="shell">
-      © <span id="year"></span> Rico Mercado. Views expressed are personal.
+      © 2026 Rico Mercado. Views expressed are personal.
     </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
 </body>
 </html>
