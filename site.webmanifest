@@ -1,0 +1,9 @@
+{
+  "name": "Rico Mercado",
+  "short_name": "Rico Mercado",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfcfa",
+  "theme_color": "#17343a",
+  "icons": []
+}
